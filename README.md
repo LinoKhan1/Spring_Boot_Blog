@@ -67,6 +67,12 @@ List of technologies, frameworks, and libraries used.
 - Lombok
 - Spring Data JPA
 - Spring Web
+- Spring Boot Test
+- JUnit Jupiter
+- Mockito
+- HTML5
+- CSS
+- JavaScript
 
 ## Project Structure
 The Spring Boot Blog Application is structured as follows:
