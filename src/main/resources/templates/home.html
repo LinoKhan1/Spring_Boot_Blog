@@ -7,36 +7,11 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link type="text/css" th:href="@{/css/style.css}" rel="stylesheet">
-    <link type="text/css" th:href="@{/css/home.css}" rel="styleheet">
 </head>
-
 <body>
 
 <!-- Navigation -->
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" th:href="@{'/'}">Median</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" th:href="@{'/'}">Home</a>
-                </li>
-
-            </ul>
-            <button class="btn" onclick="openLoginForm()">Sign in</button>
-            <button class="btn btn-outline-success" onclick="openRegisterForm()">Create an account</button>
-            <form class="d-flex">
-                <!--<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                -->
-            </form>
-        </div>
-    </div>
-</nav>
+<div th:replace="fragments/navbar :: navbar"></div>
 <div id="loginFormContainer" class="login">
 
     <div class="login-form">
@@ -47,15 +22,19 @@
                 <h1> Welcome back.</h1>
             </div>
             <div class="sign-in-options">
-                <button class="btn">Sign in with Google</button><br>
-                <button class="btn">  Sign in with Facebook</button><br>
-                <button class="btn"> Sign in with X</button><br>
+                <button class="btn">Sign in with Google</button>
+                <br>
+                <button class="btn"> Sign in with Facebook</button>
+                <br>
+                <button class="btn"> Sign in with X</button>
+                <br>
             </div>
 
             <div class="form-fields">
                 <input type="text" placeholder="email" required/><br>
                 <input type="password" placeholder="Password" required/><br>
-                <button class="btn"   type="submit">Login</button><br>
+                <button class="btn" type="submit">Login</button>
+                <br>
             </div>
 
             <span>No account? <a>Create One</a></span><br>
@@ -131,7 +110,7 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="blog-post">
-                                <img class="img-fluid size_1" src="/img/web-1.webp"/>
+                                <img class="img-fluid size_1" src="/img/web-1.webp" alt="blog-image"/>
                                 <h1> Blog Title</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 <h2>Blog Author</h2>
@@ -269,7 +248,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h1>01</h1>
+                                <h1 class="post-number">01</h1>
 
                             </div>
                             <div class="col">
@@ -282,7 +261,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h1>02</h1>
+                                <h1 class="post-number">02</h1>
 
                             </div>
                             <div class="col">
@@ -295,7 +274,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h1>03</h1>
+                                <h1 class="post-number">03</h1>
 
                             </div>
                             <div class="col">
@@ -307,73 +286,31 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h1>04</h1>
-
+                                <h1 class="post-number">04</h1>
                             </div>
                             <div class="col">
                                 <h1>Blog Title</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 <h6>Read time 5 min - 10 min</h6>
-
                             </div>
-
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h1>05</h1>
-
+                                <h1 class="post-number">05</h1>
                             </div>
                             <div class="col">
                                 <h1>Blog Title</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 <h6>Read time 5 min - 10 min</h6>
-
                             </div>
-
                         </div>
-
-
                     </div>
                 </div>
             </div>
-
-
-        </div>
-
-    </div>
-</div>
-<!-- Footer -->
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-2">
-                <h1>Median Blog</h1>
-
-            </div>
-            <div class="col-lg-5">
-                <div class="navigation">
-                    <ul>
-                        <li>About</li>
-                        <li>Blogs</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <div class="copyright">
-                    <p>2024 Median Blog, All Right Reserved!</p>
-                </div>
-
-            </div>
-            <div class="col-lg-5">
-
-
-                <a>info@medianblog.com</a>
-
-            </div>
         </div>
     </div>
-
 </div>
-
+<div th:replace="fragments/footer :: footer"></div>
 <!-- JavaScript to handle the login form -->
 <script th:src="@{/JS/script.js}"></script>
 </body>

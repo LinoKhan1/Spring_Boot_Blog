@@ -1,5 +1,4 @@
 /* Typography */
-
 html, body {
 
     font-family: Verdana, Geneva, sans-serif;
@@ -26,43 +25,6 @@ html, body {
         font-size: 1.2rem;
     }
 
-}
-
-/* Posts */
-
-.posts {
-    h1 {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-    }
-
-    p {
-        font-size: 0.8rem;
-        margin-bottom: 0.75rem;
-    }
-
-    h2 {
-        font-size: 0.8rem;
-        margin-bottom: 0.75rem;
-    }
-
-    h6 {
-        font-size: 0.8rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .featured-members, .latest_post {
-        /*position: relative;
-        padding-bottom: 100px;*/
-
-    }
-
-}
-
-/* Hero Section */
-
-.main .container .hero {
     position: relative;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -84,9 +46,46 @@ html, body {
         border: 1px solid #5BBE6D;
         color: #5BBE6D;
     }
+
 }
 
+/* Posts */
+
 .posts {
+    .title h1 {
+        font-size: 1.4rem;
+        position: relative;
+        margin-bottom: 25px;
+    }
+
+    .row h1 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+    }
+
+    h6 {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .latest_post {
+        .post-number {
+            font-size: 45px;
+            font-weight: bold;
+        }
+    }
+
     .size_1 {
         width: 400px;
         height: 200px;
@@ -104,105 +103,163 @@ html, body {
         height: 150px;
     }
 
-    .title h1 {
-        font-size: 1.4rem;
-        position: relative;
-        margin-bottom: 25px;
-    }
 
     .featured-members .row .col-lg-4 .row {
         position: relative;
         padding-bottom: 25px;
 
     }
+
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
+    .main .container .hero {
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        button {
+            font-size: 1rem;
+        }
+
+        .row .col-lg-6 .hero-image {
+            display: none;
+        }
+    }
+
+    .posts {
+        h1 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.7rem;
+        }
+
+        h2 {
+            font-size: 0.7rem;
+        }
+
+        h6 {
+            font-size: 0.7rem;
+        }
+    }
+}
+
 
 /* Create Blog */
 .create-blog {
-    height: 100%;
-
     .container {
-        /* position: relative;
-         padding-top: 100px;*/
+        position: relative;
+        max-width: 800px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 
-        h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            text-align: center;
-        }
+    .blog-form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-        form {
+    .blog-form label {
+        font-weight: bold;
+    }
 
-            padding-top: 50px;
-            margin: auto;
-            max-width: 600px;
-            position: relative;
+    button {
+        font-size: 1.2rem;
+    }
 
-            label {
-                font-size: 1.2rem;
-            }
+    .primary {
+        background-color: black;
+        color: #fff;
 
-            .form-control {
-                border-radius: 0;
-            }
-
-            input[type=text] {
-                padding-top: 15px;
-                padding-bottom: 15px;
-            }
-
-            button {
-                font-size: 1.2rem;
-            }
-
-            .primary {
-                background-color: black;
-                color: #fff;
-
-
-            }
-        }
     }
 }
 
 /* Blog List */
 .blog-list {
-    /*.container{
-        position: relative;
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }*/
+
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 75px;
 
     .title {
         position: relative;
-        /* padding-bottom: 25px;*/
+        padding-bottom: 50px;
     }
 
     .row {
         position: relative;
-        /*padding-bottom: 25px;*/
+        padding-bottom: 30px;
     }
 
     .row h1 {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
-    .row h2 {
+    .row h2 a {
         font-size: 1.4rem;
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        list-style: none;
+        padding-bottom: 14px;
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
-/* Blog Post */
 
-.blog-post {
+/* Blog Post */
+.blog-detail {
+    .container {
+        max-width: 800px;
+        position: relative;
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        .blog-header {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .blog-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .blog-author {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .blog-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+
+}
+
+/*.blog-post {
     position: relative;
-    /*padding-top: 150px;*/
-    /*width: 700px;
-    margin: auto;*/
 
     h1 {
         font-size: 3rem;
@@ -213,8 +270,45 @@ html, body {
     p {
         font-size: 1rem;
     }
+}*/
+/* Delete Blog */
+.delete-blog {
+    .container {
+        max-width: 500px;
+    }
+
+    .delete-form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .delete-form h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .delete-form p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .delete-btn {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .delete-btn:hover {
+        background-color: #c82333;
+    }
 }
 
+/* Footer */
 footer {
     position: relative;
     margin-top: 100px;
@@ -269,19 +363,21 @@ footer {
         input[type=text], input[type=password] {
             font-size: 1rem;
             margin-bottom: 20px;
-            border:none;
+            border: none;
             border-bottom: 1px solid grey;
             padding: 10px 30px 10px 30px;
 
         }
-        button{
+
+        button {
             background-color: black;
             color: #fff;
             font-size: 1.2rem;
         }
 
     }
-    .login-form h6, span, p, a{
+
+    .login-form h6, span, p, a {
         font-size: 0.8rem;
     }
 }

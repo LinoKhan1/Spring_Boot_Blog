@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="create-blog" th:fragment="blogEdit">
+    <div class="container">
+        <h1 class="mb-4">Update Blog</h1>
+        <div class="blog-form">
+            <form th:action="@{/rest/blogs/{id}/update(id=${blog.id})}" th:object="${blog}" method="post">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" th:value="${blog.title}">
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Content</label>
+                    <textarea class="form-control" id="content" name="content" rows="5"
+                              th:text="${blog.content}"></textarea>
+                </div>
+                <button type="submit" class="btn primary">Update</button>
+            </form>
+        </div>
+
+    </div>
+
+
+</div>
+</body>
+</html>
