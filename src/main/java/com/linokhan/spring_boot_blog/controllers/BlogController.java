@@ -13,6 +13,9 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Controller class for managing blog posts.
+ */
 @Controller
 @RequestMapping("rest/blogs")
 public class BlogController {
@@ -21,6 +24,12 @@ public class BlogController {
     @Autowired
     private BlogService blogService;
 
+    /**
+     * Retrieves all blog posts and renders the blog list view.
+     *
+     * @param model The model to add attributes for rendering the view.
+     * @return The name of the Thymeleaf template to render.
+     */
     @GetMapping
     public String getAllBlogs(Model model) {
         // Retrieve all blog posts from the service layer
@@ -33,12 +42,24 @@ public class BlogController {
         return "blogList";
     }
 
+    /**
+     * Renders a form for creating a new blog post.
+     *
+     * @param model The model to add attributes for rendering the view.
+     * @return The name of the Thymeleaf template to render.
+     */
     @GetMapping("/create")
     public String showCreateBlogForm(Model model) {
         model.addAttribute("blog", new Blog());
         return "createBlog";
     }
 
+    /**
+     * Handles the form submission for creating a new blog post.
+     *
+     * @param blog The blog post to create.
+     * @return The URL to redirect after creating the blog post.
+     */
     @PostMapping
     public String createBlog(@ModelAttribute("blog") Blog blog) {
         // Set publication date to the current data/time
@@ -92,22 +113,21 @@ public class BlogController {
     }
 
     @PostMapping("/{id}/update")
-    public String updateBlog(@PathVariable Integer id, @ModelAttribute Blog updatedBlog){
+    public String updateBlog(@PathVariable Integer id, @ModelAttribute Blog updatedBlog) {
 
         Blog existingBlog = blogService.getBlogById(id).orElse(null);
 
-        if(existingBlog != null){
+        if (existingBlog != null) {
             // Update the existing blog post with the data from updatedBlog
             existingBlog.setTitle(updatedBlog.getTitle());
             existingBlog.setContent(updatedBlog.getContent());
             // Save the updated blog post
             blogService.updateBlog(id, existingBlog);
             return "redirect:/rest/blogs";
-        }else{
+        } else {
             return "error";
         }
     }
-
 
 
     @GetMapping("/{id}/delete")
@@ -116,13 +136,13 @@ public class BlogController {
         Optional<Blog> blogOptional = blogService.getBlogById(id);
 
         // Check if the blog post exists
-        if(blogOptional.isPresent()){
+        if (blogOptional.isPresent()) {
             // Add the blog post to the model
             model.addAttribute("blog", blogOptional.get());
             // Return the name of the Thymeleaf template to render
             return "deleteBlog";
 
-        }else{
+        } else {
             // Handle the case where the blog post is not found
             return "error";
         }

@@ -10,14 +10,18 @@
     <link type="text/css" th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
+
 <!-- Navigation -->
 <div th:replace="fragments/navbar ::navbar"></div>
+<div th:replace="fragments/loginContent :: login"></div>
+<div th:replace="fragments/registerContent :: register"></div>
 
 <!-- Content -->
 <div th:replace="fragments/blogCreateContent :: blogCreate"></div>
 
 <!-- Footer -->
 <div th:replace="fragments/footer :: footer"></div>
+
 <script th:src="@{/JS/script.js}"></script>
 
 </body>

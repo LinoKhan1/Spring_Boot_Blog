@@ -12,52 +12,9 @@
 
 <!-- Navigation -->
 <div th:replace="fragments/navbar :: navbar"></div>
-<div id="loginFormContainer" class="login">
+<div th:replace="fragments/loginContent :: login"></div>
+<div th:replace="fragments/registerContent :: register"></div>
 
-    <div class="login-form">
-        <span class="close" onclick="closeLoginForm()">&times;</span>
-        <form id="loginForm">
-
-            <div class="title">
-                <h1> Welcome back.</h1>
-            </div>
-            <div class="sign-in-options">
-                <button class="btn">Sign in with Google</button>
-                <br>
-                <button class="btn"> Sign in with Facebook</button>
-                <br>
-                <button class="btn"> Sign in with X</button>
-                <br>
-            </div>
-
-            <div class="form-fields">
-                <input type="text" placeholder="email" required/><br>
-                <input type="password" placeholder="Password" required/><br>
-                <button class="btn" type="submit">Login</button>
-                <br>
-            </div>
-
-            <span>No account? <a>Create One</a></span><br>
-            <p> Click "Sign in" to agree to Median's Terms of Service and acknowledge that
-                Median's Privacy Policy applies to you.</p>
-        </form>
-    </div>
-
-</div>
-<div id="registerFormContainer" class="register-form-container">
-    <div class="register-form">
-        <span class="close" onclick="closeRegisterForm()">&times;</span>
-        <h2>Register</h2>
-        <form id="registerForm" onsubmit="return false;">
-            <input type="text" placeholder="Username" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
-            <button type="submit">Register</button>
-        </form>
-    </div>
-
-</div>
 <!-- Main Content -->
 <div class="main">
     <div class="container">
@@ -310,6 +267,7 @@
         </div>
     </div>
 </div>
+<!-- Footer -->
 <div th:replace="fragments/footer :: footer"></div>
 <!-- JavaScript to handle the login form -->
 <script th:src="@{/JS/script.js}"></script>

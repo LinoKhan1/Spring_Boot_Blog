@@ -258,19 +258,7 @@ html, body {
 
 }
 
-/*.blog-post {
-    position: relative;
 
-    h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        padding-bottom: 25px;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-}*/
 /* Delete Blog */
 .delete-blog {
     .container {
