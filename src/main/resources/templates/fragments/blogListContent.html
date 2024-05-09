@@ -17,9 +17,8 @@
             <h1 th:text="${blog.author}"></h1>
             <h1 th:text="${blog.publicationDate}"></h1>
             <h2><a th:href="@{'/rest/blogs/blog/' + ${blog.id}}" th:text="${blog.title}"></a></h2>
-            <p th:text="${#strings.substring(blog.content, 0, 150)} + '...'">
-                <!-- Truncate content to 150 characters -->
-            </p>
+            <span th:text="${blog.content.length() > 150 ? #strings.substring(blog.content, 0, 150) + '...' : blog.content}" />
+
         </div>
         <div class="col-lg-2">
             <img src="/img/web-1.webp" class="img-fluid" alt="blog-image"/>

@@ -17,6 +17,8 @@ import java.util.List;
  * Represents a blog post entity.
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "blog")
 public class Blog {
