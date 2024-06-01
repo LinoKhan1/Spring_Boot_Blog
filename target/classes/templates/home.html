@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Median Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<div th:replace="fragments/navbar :: navbar"></div>
+<div th:replace="fragments/loginContent :: login"></div>
+<div th:replace="fragments/registerContent :: register"></div>
+
+<!-- Main Content -->
+<div class="main">
+    <div class="container">
+
+        <!-- Hero Section  -->
+        <div class="hero">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>
+                        Welcome to Media, a Software Engineering
+                        Blog Platform.
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </p>
+                    <div class="span-buttons">
+                        <a th:href="@{'/rest/blogs'}" class="btn primary">
+                            View Blogs
+                        </a>
+                        <button onclick="openRegisterForm()" class="btn secondary">
+                            Create and account
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="/img/web-1.webp" class="img-fluid" alt="hero-image"/>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Posts -->
+        <div class="posts">
+            <!-- Featured Members -->
+
+            <div class="featured-members">
+                <div class="container">
+
+                    <div class="title">
+                        <h1>Featured for members</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="blog-post">
+                                <img class="img-fluid size_1" src="/img/web-1.webp" alt="blog-image"/>
+                                <h1> Blog Title</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h2>Blog Author</h2>
+                                <h6>Read time 5 min - 10 min</h6>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img class="img-fluid size_2" src="/img/web-1.webp" alt="blog-image">
+                                </div>
+                                <div class="col">
+                                    <h1> Blog Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h2>Blog Author</h2>
+                                    <h6>Read time 5 min - 10 min</h6>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img class="img-fluid size_2" src="/img/web-1.webp" alt="blog-image">
+                                </div>
+                                <div class="col">
+                                    <h1> Blog Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h2>Blog Author</h2>
+                                    <h6>Read time 5 min - 10 min</h6>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col">
+                                    <img class="img-fluid size_3" src="/img/web-1.webp" alt="blog-image">
+                                </div>
+                                <div class="col">
+                                    <h1> Blog Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h2>Blog Author</h2>
+                                    <h6>Read time 5 min - 10 min</h6>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img class="img-fluid size_3" src="/img/web-1.webp" alt="blog-image">
+                                </div>
+                                <div class="col">
+                                    <h1> Blog Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h2>Blog Author</h2>
+                                    <h6>Read time 5 min - 10 min</h6>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <img class="img-fluid size_3" src="/img/web-1.webp" alt="blog-image">
+                                </div>
+                                <div class="col">
+                                    <h1> Blog Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h2>Blog Author</h2>
+                                    <h6>Read time 5 min - 10 min</h6>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container latest_post">
+                <div class="row">
+                    <!-- Latest Posts -->
+                    <div class="col-lg-8">
+                        <div class="title">
+                            <h1> Latest Posts</h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="blog-post">
+                                    <img class="img-fluid size_1" src="/img/web-1.webp" alt="blog-image">
+                                    <h1> Blog Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h2>Blog Author</h2>
+                                    <h6>Read time 5 min - 10 min</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="blog-post">
+                                    <img class="img-fluid size_1" src="/img/web-1.webp" alt="blog-image">
+                                    <h1> Blog Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h2>Blog Author</h2>
+                                    <h6>Read time 5 min - 10 min</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="blog-post">
+                                    <img class="img-fluid size_1" src="/img/web-1.webp" alt="blog-image">
+                                    <h1> Blog Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h2>Blog Author</h2>
+                                    <h6>Read time 5 min - 10 min</h6>
+                                </div>
+
+
+                            </div>
+                            <div class="col">
+                                <div class="blog-post">
+                                    <img class="img-fluid size_1" src="/img/web-1.webp" alt="blog-image">
+                                    <h1> Blog Title</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <h2>Blog Author</h2>
+                                    <h6>Read time 5 min - 10 min</h6>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- Popular Posts -->
+                    <div class="col-lg-4">
+                        <div class="title">
+                            <h1>Popular Posts</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="post-number">01</h1>
+
+                            </div>
+                            <div class="col">
+                                <h1>Blog Title</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h6>Read time 5 min - 10 min</h6>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="post-number">02</h1>
+
+                            </div>
+                            <div class="col">
+                                <h1>Blog Title</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h6>Read time 5 min - 10 min</h6>
+
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="post-number">03</h1>
+
+                            </div>
+                            <div class="col">
+                                <h1>Blog Title</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h6>Read time 5 min - 10 min</h6>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="post-number">04</h1>
+                            </div>
+                            <div class="col">
+                                <h1>Blog Title</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h6>Read time 5 min - 10 min</h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="post-number">05</h1>
+                            </div>
+                            <div class="col">
+                                <h1>Blog Title</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h6>Read time 5 min - 10 min</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<div th:replace="fragments/footer :: footer"></div>
+<!-- JavaScript to handle the login form -->
+<script th:src="@{/JS/script.js}"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" th:href="@{/css/style.css}" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container blog-list" th:fragment="blogList">
+    <div class="title">
+        <h1>Blog list</h1>
+    </div>
+    <div class="row" th:each="blog: ${blogs}">
+        <div class="col-lg-6">
+            <h1 th:text="${blog.author}"></h1>
+            <h1 th:text="${blog.publicationDate}"></h1>
+            <h2><a th:href="@{'/rest/blogs/blog/' + ${blog.id}}" th:text="${blog.title}"></a></h2>
+            <span th:text="${blog.content.length() > 150 ? #strings.substring(blog.content, 0, 150) + '...' : blog.content}" />
+
+        </div>
+        <div class="col-lg-2">
+            <img src="/img/web-1.webp" class="img-fluid" alt="blog-image"/>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

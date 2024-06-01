@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="loginFormContainer" class="login" th:fragment="login">
+
+    <div class="login-form">
+        <span class="close" onclick="closeLoginForm()">&times;</span>
+        <form id="loginForm">
+
+            <div class="title">
+                <h1> Welcome back.</h1>
+            </div>
+            <div class="sign-in-options">
+                <button class="btn">Sign in with Google</button>
+                <br>
+                <button class="btn"> Sign in with Facebook</button>
+                <br>
+                <button class="btn"> Sign in with X</button>
+                <br>
+            </div>
+
+            <div class="form-fields">
+                <input type="text" placeholder="email" required/><br>
+                <input type="password" placeholder="Password" required/><br>
+                <button class="btn" type="submit">Login</button>
+                <br>
+            </div>
+
+            <span>No account? <a>Create One</a></span><br>
+            <p> Click "Sign in" to agree to Median's Terms of Service and acknowledge that
+                Median's Privacy Policy applies to you.</p>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

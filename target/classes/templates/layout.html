@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Layout</title>
+</head>
+<body>
+
+<!-- Include Navbar Fragment -->
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<!-- Page content -->
+<div class="container">
+    <!-- Placeholder for content specific to each view -->
+    <div th:fragment="content"></div>
+</div>
+
+<!-- Include Footer Fragment -->
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>
