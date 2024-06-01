@@ -107,5 +107,3 @@ Guidelines for contributing to the project.
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Contact Information
-For questions or support, please contact Lino Khan at linokhan1@gmail.com.
