@@ -24,6 +24,7 @@ import static org.mockito.Mockito.when;
  */
 @WebMvcTest(BlogController.class)
 @AutoConfigureMockMvc(addFilters = false)
+
 public class BlogControllerTest {
 
     @Autowired
@@ -234,15 +235,11 @@ public class BlogControllerTest {
 
         // Send a DELETE request to "/rest/blogs/1/delete"
         mockMvc.perform(MockMvcRequestBuilders.post("/rest/blogs/1/delete"))
-
                 // Expect status 302 Found (redirect)
                 .andExpect(MockMvcResultMatchers.status().isFound())
                 // Expect redirected URL to be "/rest/blogs"
                 .andExpect(MockMvcResultMatchers.redirectedUrl("/rest/blogs"));
-
         // Verify that the deleteBlog method in the service is called with the correct ID
         verify(blogService).deleteBlog(1);
     }
-
-
 }

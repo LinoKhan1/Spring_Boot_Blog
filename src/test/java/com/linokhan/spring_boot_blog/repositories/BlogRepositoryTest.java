@@ -118,6 +118,7 @@ public class BlogRepositoryTest {
 
         List<Blog> blogs = blogRepository.findAll();
         assertEquals(1, blogs.size());
+
     }
 
 }
