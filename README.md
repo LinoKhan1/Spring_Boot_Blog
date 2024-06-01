@@ -10,6 +10,12 @@ The Spring Boot Blog Application is a web-based platform designed for managing a
 3. Blog Post Management (Update and Delete)
 4. User Authentication and Authorization
 5. User-friendly Interface
+6. API Testing
+7. Services Unit Testing
+8. Integration Testing
+9. Controller Testing
+10. Repository Testing
+   
 
 ## Table of Contents
 - [Installation](#installation)
